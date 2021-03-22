@@ -210,9 +210,3 @@ gsap.to(".footer", {
 
 
 // gsap responsive
-
-    if (e.matches) {
-        
-    } else {
-    
-    }
