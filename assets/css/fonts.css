@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Franklin Gothic Book';
+    src: url('../fonts/FranklinGothic-Book.woff2') format('woff2'),
+        url('../fonts/FranklinGothic-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gopher';
+    src: url('../fonts/Gopher-Medium.woff2') format('woff2'),
+        url('../fonts/Gopher-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roxborough CF';
+    src: url('../fonts/RoxboroughCF-Thin.woff2') format('woff2'),
+        url('../fonts/RoxboroughCF-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roxborough CF';
+    src: url('../fonts/RoxboroughCF-Medium.woff2') format('woff2'),
+        url('../fonts/RoxboroughCF-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
