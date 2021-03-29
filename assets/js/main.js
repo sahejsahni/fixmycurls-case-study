@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
+
 // hero animation
 
 var heroOnLoad = gsap.timeline();
@@ -122,48 +123,57 @@ $('#cls-hover').hover(function() {
   startSetInterval();
 });
 
+// 
+ScrollTrigger.matchMedia({
+    "(min-width: 769px)": function() {
+        
+        // listing pinning                 
+        
+        let listingPin = gsap;
 
-// listing pinning 
+        listingPin.to(".display", {
+            scrollTrigger: {
+                trigger: ".listing .cta",
+                pin: true,
+                start: "top",
+                end: "bottom center",
+                markers: true
+            }
+        })
+        
+        // benefits scrolling
 
-gsap.to(".display", {
-    scrollTrigger: {
-        trigger: ".cta-wrapper",
-        pin: true,
-        start: "top 120",
-        end: "bottom",
+        let sections = gsap.utils.toArray(".benefit");
+
+        gsap.to(sections, {
+        xPercent: -118 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".stage",
+            start: "top 120",
+            pin: true,
+            pinSpacer: true,
+            scrub: 1,
+            // base vertical scrolling on how wide the container is so it feels more natural.
+            end: () => "+=" + 0.8*document.querySelector(".stage").offsetWidth
+        }
+        });
+                
+        // footer reveal 
+
+        gsap.to(".footer", {
+            y:"80vh" ,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".footer",
+                start: "top 20%",
+                end: "bottom 20%",
+                scrub: true,
+            }
+        })
     }
 })
 
-// benefits scrolling
-
-let sections = gsap.utils.toArray(".benefit");
-
-gsap.to(sections, {
-  xPercent: -118 * (sections.length - 1),
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".stage",
-    start: "top 120",
-    pin: true,
-    pinSpacer: true,
-    scrub: 1,
-    // base vertical scrolling on how wide the container is so it feels more natural.
-    end: () => "+=" + 0.8*document.querySelector(".stage").offsetWidth
-  }
-});
-
-// footer reveal 
-
-gsap.to(".footer", {
-    y:"80vh" ,
-    ease: "none",
-    scrollTrigger: {
-        trigger: ".footer",
-        start: "top 20%",
-        end: "bottom 20%",
-        scrub: true,
-    }
-})
 
 // var smoothScroll = gsap.timeline();
 //                 speed1 = ".speed1";
