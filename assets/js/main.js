@@ -1,3 +1,10 @@
+// preloader
+
+$(window).load(function() {
+    $('.preloader').fadeOut('slow');
+    $('body').css({'overflow':'auto', 'height':'auto', 'position':'relative'});
+ });
+
 gsap.registerPlugin(ScrollTrigger);
 
 

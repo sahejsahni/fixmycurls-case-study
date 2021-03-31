@@ -1,3 +1,54 @@
+/* preloader */
+body {
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    width:100%;
+}
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+.preloader {
+    background-color: white;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loading {
+    color: #29180E;
+    font-size: 0.9em;
+    font-family: 'Gopher', sans-serif;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+.preloader p {
+    position: absolute;
+    bottom: 5%;
+}
+.preloader img {
+    width: 5em;
+    margin-bottom: 1em;
+}
+.loading.splitting .char {
+    animation: slide-in 2s ease-out infinite;
+    animation-delay: calc(60ms * var(--char-index));
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-1em) rotate(-0.1turn) scale(0.5);
+    }
+    15%,
+    100% {
+      transform: translateY(0) rotate(0deg) scale(1);
+    }
+  }
 /* typography */
 * {
     color: #29180E;
