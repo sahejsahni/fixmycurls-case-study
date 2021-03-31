@@ -144,7 +144,6 @@ ScrollTrigger.matchMedia({
                 pin: true,
                 start: "top",
                 end: "bottom center",
-                markers: true
             }
         })
         
